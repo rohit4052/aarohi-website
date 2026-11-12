@@ -43,9 +43,21 @@ export default function Navbar() {
         <div className="container">
           <div className="navbar-inner">
             <Link href="/" className="navbar-logo" onClick={() => setMenuOpen(false)}>
-              <Image src="/images/logo.jpg" alt="Arohi Hair Care Logo" width={46} height={46} style={{ borderRadius: '50%', objectFit: 'cover' }} />
+              <Image
+                src="/images/logo.jpg"
+                alt="Arohi Hair Care Logo"
+                width={48}
+                height={48}
+                style={{
+                  borderRadius: '50%',
+                  objectFit: 'contain',
+                  background: '#FEFAF8',
+                  border: '1.5px solid rgba(201,168,76,0.45)',
+                  padding: '2px',
+                }}
+              />
               <div>
-                <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 700, color: 'var(--color-gold-dark)', display: 'block' }}>AROHI</span>
+                <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 700, color: 'var(--color-gold-dark)', display: 'block', lineHeight: 1.05 }}>AROHI</span>
                 <span className="logo-sub">Hair Care</span>
               </div>
             </Link>

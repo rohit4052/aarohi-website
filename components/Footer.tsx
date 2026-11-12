@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const WHATSAPP = '+919370817379';
 
@@ -36,8 +37,29 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Brand */}
           <div>
-            <div className="footer-logo-name">AROHI</div>
-            <p className="footer-tagline">निसर्गाची देणगी, तुमच्या केसांसाठी!</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '0.75rem' }}>
+              <Image
+                src="/images/logo.jpg"
+                alt="Arohi Hair Care Logo"
+                width={56}
+                height={56}
+                style={{
+                  borderRadius: '50%',
+                  objectFit: 'contain',
+                  background: '#FEFAF8',
+                  border: '1.5px solid rgba(201,168,76,0.6)',
+                  padding: '2px',
+                  flexShrink: 0,
+                }}
+              />
+              <div>
+                <div className="footer-logo-name" style={{ marginBottom: 0 }}>AROHI</div>
+                <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.72)', fontStyle: 'italic' }}>
+                  Healthy Hair... Happy You! 💗
+                </div>
+              </div>
+            </div>
+            <p className="footer-tagline">नैसर्गिक घटकांसह केसांची नियमित निगा राखा.</p>
             <p style={{ marginBottom: '1.25rem' }}>
               पारंपरिक वनौषधींपासून प्रेरणा घेऊन तयार केलेली Arohi Hair Care ची उत्पादने
               तुमच्या केसांच्या नियमित काळजीसाठी एक संपूर्ण कलेक्शन.
@@ -110,7 +132,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} Arohi Hair Care. All rights reserved.</p>
-          <p style={{ fontFamily: 'var(--font-marathi)' }}>निसर्गाची देणगी, तुमच्या केसांसाठी! 🌿</p>
+          <p style={{ fontFamily: 'var(--font-marathi)' }}>Healthy Hair... Happy You! 💗 &nbsp;|&nbsp; नैसर्गिक घटकांसह केसांची नियमित निगा राखा. 🌿</p>
         </div>
       </div>
     </footer>

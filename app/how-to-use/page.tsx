@@ -18,7 +18,7 @@ export default function HowToUsePage() {
           <div className="divider-gold" />
           <p>
             Step-by-step instructions for all Arohi Hair Care products.<br />
-            <span style={{ fontFamily: 'var(--font-marathi)' }}>वापरण्याची पद्धत – प्रत्येक उत्पादनासाठी</span>
+            <span style={{ fontFamily: 'var(--font-marathi)' }}>🌸 आरोही हेअर केअर – वापरण्याची योग्य पद्धत 🌸</span>
           </p>
         </div>
       </div>
@@ -26,10 +26,13 @@ export default function HowToUsePage() {
       {/* Routine Guide */}
       <section className="section-sm" style={{ background: 'var(--color-gold-light)' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <h3 style={{ marginBottom: '1rem' }}>🌿 Recommended Weekly Routine</h3>
-          <p style={{ maxWidth: '650px', margin: '0 auto', fontSize: '1rem' }}>
-            For best results, follow this complete hair care routine:
-            <strong style={{ color: 'var(--color-gold-dark)' }}> Oil (2-3x/week) → Shampoo → Conditioner → Toner (daily) → Serum → Mask (1x/week)</strong>
+          <h3 style={{ marginBottom: '1rem' }}>🌿 Recommended Hair Care Routine</h3>
+          <p style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1rem' }}>
+            For best results, follow this complete routine:
+            <strong style={{ color: 'var(--color-gold-dark)' }}> Oil (2x/week at night) → Shampoo (morning, diluted in bowl) → Conditioner → Toner (daily) → Serum → Herbal Hair Mask / मेहंदी (1x/month)</strong>
+          </p>
+          <p style={{ maxWidth: '650px', margin: '0.6rem auto 0', fontSize: '0.9rem', fontFamily: 'var(--font-marathi)', color: 'var(--color-green-dark)', fontWeight: 500 }}>
+            नैसर्गिक घटकांसह केसांची नियमित निगा राखा.
           </p>
         </div>
       </section>
@@ -59,7 +62,7 @@ export default function HowToUsePage() {
                   }}
                 >
                   <div style={{ fontSize: '3rem', marginBottom: '0.75rem' }}>
-                    {['🌿', '🧴', '💧', '✨', '🌱', '💫'][pi]}
+                    {['🌿', '🧴', '💧', '✨', '🌺', '💫'][pi]}
                   </div>
                   <h3 style={{ fontSize: '1.4rem', marginBottom: '0.3rem' }}>{product.name}</h3>
                   <span style={{ fontFamily: 'var(--font-marathi)', fontSize: '1rem', color: 'var(--color-gold-dark)', display: 'block', marginBottom: '0.5rem' }}>
@@ -133,12 +136,12 @@ export default function HowToUsePage() {
           </div>
           <div className="grid-3">
             {[
-              { icon: '🌡️', tip: 'Always use lukewarm water (not hot) for washing hair', tipMr: 'केस धुण्यासाठी नेहमी कोमट पाणी वापरा (गरम नाही)' },
-              { icon: '💆‍♀️', tip: 'Massage oil gently – aggressive rubbing damages roots', tipMr: 'तेल हलक्या हाताने लावा – जोरात घासल्यास मुळांना नुकसान होते' },
-              { icon: '🌿', tip: 'Consistency is key – use products regularly for best results', tipMr: 'नियमितता महत्त्वाची – सर्वोत्तम परिणामासाठी नियमित वापरा' },
-              { icon: '⏰', tip: 'Leave oil overnight for maximum nourishment', tipMr: 'जास्तीत जास्त पोषणासाठी तेल रात्रभर ठेवा' },
-              { icon: '🧴', tip: 'Always follow shampoo with conditioner', tipMr: 'शॅम्पूनंतर नेहमी कंडिशनर वापरा' },
-              { icon: '✂️', tip: 'Trim split ends every 6-8 weeks for healthier hair', tipMr: 'निरोगी केसांसाठी दर ६-८ आठवड्यांनी टोके कापा' },
+              { icon: '🚫', tip: 'Never heat the Hair Oil — always apply it directly to roots & hair', tipMr: 'तेल कधीही गरम करू नये. थेट वापरावे.' },
+              { icon: '🥣', tip: 'Always dilute shampoo with a little water in a bowl before applying', tipMr: 'आवश्यक तेवढा शॅम्पू एका वाटीत घेऊन थोडे पाणी मिसळून वापरावा.' },
+              { icon: '🌙', tip: 'Apply Hair Oil twice a week at night and wash in the morning', tipMr: 'आठवड्यातून दोन वेळा रात्री तेल लावा आणि सकाळी शॅम्पूने धुवा.' },
+              { icon: '🌺', tip: 'Use Herbal Hair Mask (मेहंदी) once a month with herbal water', tipMr: 'महिन्यातून एकदा हर्बल हेअर मास्क हर्बल पाण्यासोबत वापरा.' },
+              { icon: '🧪', tip: 'Always perform a patch test before applying the Hair Mask', tipMr: 'हेअर मास्क वापरण्यापूर्वी नेहमी पॅच टेस्ट करावी.' },
+              { icon: '💆‍♀️', tip: 'Massage gently with fingertips – aggressive rubbing damages roots', tipMr: 'बोटांच्या टोकांनी हलक्या हाताने मसाज करा – जोरात घासल्यास मुळांना नुकसान होते.' },
             ].map((t, i) => (
               <div key={i} style={{
                 background: 'white', borderRadius: 'var(--radius-md)', padding: '1.5rem',
@@ -149,6 +152,26 @@ export default function HowToUsePage() {
                 <p style={{ fontFamily: 'var(--font-marathi)', fontSize: '0.78rem', color: 'var(--color-text-muted)' }}>{t.tipMr}</p>
               </div>
             ))}
+          </div>
+
+          <div style={{
+            marginTop: '3rem',
+            background: 'white',
+            borderRadius: 'var(--radius-lg)',
+            padding: '2rem 1.5rem',
+            textAlign: 'center',
+            border: '1px solid var(--color-border)',
+            boxShadow: 'var(--shadow-sm)',
+          }}>
+            <div style={{ fontSize: '1.15rem', fontWeight: 700, fontFamily: 'var(--font-marathi)', color: 'var(--color-green-dark)', marginBottom: '0.4rem' }}>
+              🌿 आरोही हेअर केअर
+            </div>
+            <p style={{ fontFamily: 'var(--font-marathi)', color: 'var(--color-text-muted)', marginBottom: '0.5rem' }}>
+              नैसर्गिक घटकांसह केसांची नियमित निगा राखा.
+            </p>
+            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.45rem', fontWeight: 600, fontStyle: 'italic', color: 'var(--color-gold-dark)' }}>
+              Healthy Hair... Happy You! 💗
+            </div>
           </div>
         </div>
       </section>

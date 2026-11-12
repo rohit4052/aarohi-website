@@ -6,11 +6,11 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Arohi Hair Care – निसर्गाची देणगी, तुमच्या केसांसाठी!',
+    default: 'Arohi Hair Care – Healthy Hair... Happy You!',
     template: '%s | Arohi Hair Care',
   },
   description:
-    'Arohi Hair Care – Premium herbal hair care products made from traditional Indian botanicals. Shop Herbal Hair Oil, Shampoo, Conditioner, Toner, Hair Mask & Serum. Order via WhatsApp.',
+    'Arohi Hair Care – Premium herbal hair care products made from traditional Indian botanicals. नैसर्गिक घटकांसह केसांची नियमित निगा राखा. Order via WhatsApp.',
   keywords: [
     'Arohi Hair Care',
     'herbal hair oil',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'आवळा शॅम्पू',
   ],
   openGraph: {
-    title: 'Arohi Hair Care – निसर्गाची देणगी, तुमच्या केसांसाठी!',
+    title: 'Arohi Hair Care – Healthy Hair... Happy You!',
     description: 'Premium herbal hair care products from Solapur, Maharashtra.',
     type: 'website',
   },

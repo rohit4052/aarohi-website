@@ -5,9 +5,9 @@ import { products } from '@/data/products';
 import { ingredients } from '@/data/ingredients';
 
 export const metadata: Metadata = {
-  title: 'Arohi Hair Care – निसर्गाची देणगी, तुमच्या केसांसाठी!',
+  title: 'Arohi Hair Care – Healthy Hair... Happy You!',
   description:
-    'Premium herbal hair care products made from traditional Indian Ayurvedic botanicals. Reduce hair fall, control dandruff, promote growth. Order via WhatsApp.',
+    'Premium herbal hair care products made from traditional Indian Ayurvedic botanicals. नैसर्गिक घटकांसह केसांची नियमित निगा राखा. Order via WhatsApp.',
 };
 
 const WHATSAPP = '+919370817379';
@@ -65,10 +65,10 @@ export default function HomePage() {
             <div className="hero-content">
               <span className="hero-eyebrow">🌿 100% Natural &amp; Herbal</span>
               <h1 className="hero-title">
-                Beautiful Hair<br />
-                <span style={{ color: 'var(--color-gold)' }}>Naturally.</span>
+                Healthy Hair...<br />
+                <span style={{ color: 'var(--color-gold)' }}>Happy You!</span>
               </h1>
-              <span className="hero-title-mr">निसर्गाची देणगी, तुमच्या केसांसाठी!</span>
+              <span className="hero-title-mr">नैसर्गिक घटकांसह केसांची नियमित निगा राखा.</span>
               <p className="hero-desc">
                 पारंपरिक वनौषधींपासून प्रेरणा घेऊन तयार केलेली Arohi Hair Care ची उत्पादने
                 तुमच्या केसांच्या नियमित काळजीसाठी एक संपूर्ण नैसर्गिक उपाय.
