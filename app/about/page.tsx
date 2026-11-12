@@ -42,7 +42,7 @@ export default function AboutPage() {
       {/* Brand Story */}
       <section className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+          <div className="split-grid">
             <div>
               <span style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--color-gold)', marginBottom: '0.75rem' }}>
                 Our Mission
@@ -92,7 +92,7 @@ export default function AboutPage() {
             <h2>How We Got Here</h2>
             <div className="divider-gold" />
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '1.5rem' }}>
+          <div className="grid-4-steps">
             {milestones.map((m, i) => (
               <div key={i} style={{
                 background: 'white', borderRadius: 'var(--radius-lg)', padding: '2rem',
@@ -126,7 +126,7 @@ export default function AboutPage() {
             <h2>Our Core Values</h2>
             <div className="divider-gold" />
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '1.5rem' }}>
+          <div className="grid-4">
             {values.map((v) => (
               <div key={v.label} className="usp-card" style={{ background: 'white', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-sm)' }}>
                 <div className="usp-icon-wrap">{v.icon}</div>

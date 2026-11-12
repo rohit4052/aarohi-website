@@ -43,20 +43,12 @@ export default async function ProductPage({
   return (
     <div className="page-wrapper">
       {/* Hero */}
-      <section style={{
-        background: 'linear-gradient(135deg, var(--color-blush) 0%, white 60%, var(--color-gold-light) 100%)',
-        padding: '5rem 0',
-      }}>
+      <section className="product-detail-hero">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+          <div className="split-grid">
             {/* Image */}
-            <div style={{ position: 'relative' }}>
-              <div style={{
-                position: 'absolute', inset: '-1rem',
-                background: 'linear-gradient(135deg, var(--color-blush-dark), var(--color-gold-light))',
-                borderRadius: 'var(--radius-xl)',
-                zIndex: 0,
-              }} />
+            <div className="product-detail-img-wrap">
+              <div className="product-detail-img-bg" />
               <Image
                 src={product.image}
                 alt={product.name}
@@ -71,13 +63,7 @@ export default async function ProductPage({
                 }}
                 priority
               />
-              <div style={{
-                position: 'absolute', bottom: '-1rem', right: '-1rem', zIndex: 2,
-                background: 'white', borderRadius: 'var(--radius-lg)',
-                padding: '1rem 1.25rem', boxShadow: 'var(--shadow-md)',
-                border: '1px solid var(--color-border)',
-                textAlign: 'center',
-              }}>
+              <div className="product-qty-badge">
                 <div style={{ fontSize: '1.5rem', marginBottom: '0.25rem' }}>📦</div>
                 <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-text)' }}>Net Quantity</div>
                 <div style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--color-gold-dark)' }}>{product.size}</div>
@@ -126,7 +112,7 @@ export default async function ProductPage({
               </div>
 
               {/* CTA Buttons */}
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div className="product-detail-actions">
                 <a
                   href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(product.whatsappMessage)}`}
                   target="_blank"
@@ -153,7 +139,7 @@ export default async function ProductPage({
       {/* Benefits & How to Use */}
       <section className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
+          <div className="split-grid-start">
             {/* Benefits */}
             <div>
               <h3 style={{ marginBottom: '1.5rem' }}>
@@ -251,7 +237,7 @@ export default async function ProductPage({
               <span className="eyebrow">Also Available</span>
               <h3>You May Also Like</h3>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '1.5rem' }}>
+            <div className="grid-3">
               {otherProducts.map((p) => (
                 <Link key={p.id} href={`/products/${p.slug}`} style={{ textDecoration: 'none' }}>
                   <div className="card" style={{ display: 'flex', gap: '1rem', padding: '1rem', alignItems: 'center', borderRadius: 'var(--radius-md)' }}>

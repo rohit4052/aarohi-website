@@ -41,7 +41,7 @@ export default function ShopPage() {
             <div className="divider-gold" />
             <p>ऑर्डर करण्याची सोपी पद्धत – फक्त ४ सोपे पाऊले</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '1.5rem' }}>
+          <div className="grid-4-steps">
             {steps.map((s) => (
               <div key={s.step} style={{
                 background: 'white', borderRadius: 'var(--radius-lg)', padding: '2rem',
@@ -77,7 +77,7 @@ export default function ShopPage() {
             <div className="divider-gold" />
             <p>Click &ldquo;Order Now&rdquo; on any product to open WhatsApp with a pre-filled message</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '1.5rem' }}>
+          <div className="grid-3">
             {products.map((product) => (
               <div key={product.id} style={{
                 background: 'white', borderRadius: 'var(--radius-lg)',
@@ -144,7 +144,7 @@ export default function ShopPage() {
             <span className="eyebrow">Payment</span>
             <h3>Payment Methods</h3>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '1.5rem', maxWidth: '800px', margin: '0 auto' }}>
+          <div className="grid-3" style={{ maxWidth: '800px', margin: '0 auto' }}>
             {[
               { icon: '📱', title: 'UPI Payment', desc: 'GPay, PhonePe, Paytm, BHIM UPI' },
               { icon: '🏦', title: 'Bank Transfer', desc: 'Direct NEFT/IMPS bank transfer' },

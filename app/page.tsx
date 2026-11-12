@@ -154,7 +154,7 @@ export default function HomePage() {
               Arohi Hair Care हे बदलण्यासाठी आले आहे.
             </p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '1.5rem' }}>
+          <div className="grid-4">
             {problems.map((p) => (
               <div key={p.title} className="problem-card">
                 <span className="problem-icon">{p.icon}</span>
@@ -187,7 +187,7 @@ export default function HomePage() {
           <div className="products-grid">
             {products.map((product) => (
               <div key={product.id} className="product-card">
-                <div className="product-card-image">
+                <Link href={`/products/${product.slug}`} className="product-card-image" style={{ display: 'block' }}>
                   <Image
                     src={product.image}
                     alt={product.name}
@@ -196,15 +196,14 @@ export default function HomePage() {
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                   <div className="product-card-overlay">
-                    <Link
-                      href={`/products/${product.slug}`}
+                    <span
                       className="btn btn-secondary btn-sm"
                       style={{ background: 'white', color: 'var(--color-gold-dark)' }}
                     >
                       View Details →
-                    </Link>
+                    </span>
                   </div>
-                </div>
+                </Link>
                 <Link href={`/products/${product.slug}`} style={{ textDecoration: 'none' }}>
                   <div className="product-card-body">
                     <span className="badge badge-green" style={{ marginBottom: '0.75rem' }}>✓ Available</span>
@@ -224,7 +223,9 @@ export default function HomePage() {
                   >
                     Enquire Now
                   </a>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>WhatsApp Price</span>
+                  <Link href={`/products/${product.slug}`} style={{ fontSize: '0.82rem', color: 'var(--color-gold-dark)', fontWeight: 600 }}>
+                    Details →
+                  </Link>
                 </div>
               </div>
             ))}
@@ -247,7 +248,7 @@ export default function HomePage() {
             <div className="divider-gold" />
             <p>केसांच्या नियमित काळजीसाठी एकाच ब्रँडमध्ये विविध उत्पादने</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '1.5rem' }}>
+          <div className="grid-4">
             {usps.map((u) => (
               <div key={u.title} className="usp-card">
                 <div className="usp-icon-wrap">{u.icon}</div>

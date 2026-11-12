@@ -104,12 +104,7 @@ export default function FAQPage() {
           </div>
 
           {/* Still have questions */}
-          <div style={{
-            maxWidth: '800px', margin: '3rem auto 0',
-            background: 'linear-gradient(135deg, var(--color-blush) 0%, white 100%)',
-            borderRadius: 'var(--radius-lg)', padding: '2.5rem',
-            textAlign: 'center', border: '1px solid var(--color-border)',
-          }}>
+          <div className="faq-cta-box">
             <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>💬</div>
             <h3 style={{ marginBottom: '0.5rem' }}>Still have questions?</h3>
             <p style={{ marginBottom: '1.5rem', fontFamily: 'var(--font-marathi)' }}>

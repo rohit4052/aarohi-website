@@ -39,22 +39,25 @@ export default function HowToUsePage() {
         <div className="container">
           <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
             {products.map((product, pi) => (
-              <div key={product.id} style={{
-                display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '3rem',
-                alignItems: 'start',
-                paddingBottom: '4rem',
-                borderBottom: pi < products.length - 1 ? '1px solid var(--color-border)' : 'none',
-              }}>
+              <div
+                key={product.id}
+                className="how-to-product-grid"
+                style={{
+                  paddingBottom: '4rem',
+                  borderBottom: pi < products.length - 1 ? '1px solid var(--color-border)' : 'none',
+                }}
+              >
                 {/* Product Info Card */}
-                <div style={{
-                  background: 'linear-gradient(135deg, var(--color-blush) 0%, white 100%)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: '2rem',
-                  border: '1px solid var(--color-border)',
-                  textAlign: 'center',
-                  position: 'sticky',
-                  top: '100px',
-                }}>
+                <div
+                  className="how-to-sticky-card"
+                  style={{
+                    background: 'linear-gradient(135deg, var(--color-blush) 0%, white 100%)',
+                    borderRadius: 'var(--radius-lg)',
+                    padding: '2rem',
+                    border: '1px solid var(--color-border)',
+                    textAlign: 'center',
+                  }}
+                >
                   <div style={{ fontSize: '3rem', marginBottom: '0.75rem' }}>
                     {['🌿', '🧴', '💧', '✨', '🌱', '💫'][pi]}
                   </div>
@@ -128,7 +131,7 @@ export default function HowToUsePage() {
             <span className="eyebrow">Pro Tips</span>
             <h3>💡 General Hair Care Tips</h3>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '1.5rem' }}>
+          <div className="grid-3">
             {[
               { icon: '🌡️', tip: 'Always use lukewarm water (not hot) for washing hair', tipMr: 'केस धुण्यासाठी नेहमी कोमट पाणी वापरा (गरम नाही)' },
               { icon: '💆‍♀️', tip: 'Massage oil gently – aggressive rubbing damages roots', tipMr: 'तेल हलक्या हाताने लावा – जोरात घासल्यास मुळांना नुकसान होते' },

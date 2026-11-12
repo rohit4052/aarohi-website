@@ -29,7 +29,7 @@ export default function ContactPage() {
 
       <section className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
+          <div className="split-grid-start">
             {/* Contact Info */}
             <div>
               <h2 style={{ marginBottom: '2rem', fontSize: '2rem' }}>
@@ -94,7 +94,7 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Info Card */}
-            <div style={{ background: 'white', borderRadius: 'var(--radius-xl)', padding: '2.5rem', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-md)' }}>
+            <div className="contact-card">
               <h3 style={{ marginBottom: '0.5rem' }}>Send us a Message</h3>
               <p style={{ marginBottom: '2rem', fontFamily: 'var(--font-marathi)', fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>
                 संदेश पाठवा – WhatsApp वर थेट पाठवला जाईल
@@ -105,7 +105,7 @@ export default function ContactPage() {
                   { icon: '📞', title: 'Call Us', desc: 'सोमवार ते शनिवार सकाळी ९ ते संध्याकाळी ७ वाजेपर्यंत.', href: 'tel:+919370817379', btnText: 'Call +91 93708 17379', btnClass: 'btn-primary' },
                   { icon: '🛒', title: 'Place an Order', desc: 'सर्व उत्पादने पाहा आणि WhatsApp द्वारे ऑर्डर करा.', href: '/shop', btnText: 'Go to Shop', btnClass: 'btn-secondary' },
                 ].map((item) => (
-                  <div key={item.title} style={{ display: 'flex', gap: '1rem', padding: '1.25rem', background: 'var(--color-blush)', borderRadius: 'var(--radius-md)', alignItems: 'flex-start' }}>
+                  <div key={item.title} className="contact-action-item">
                     <span style={{ fontSize: '2rem', flexShrink: 0 }}>{item.icon}</span>
                     <div style={{ flex: 1 }}>
                       <div style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '0.3rem' }}>{item.title}</div>

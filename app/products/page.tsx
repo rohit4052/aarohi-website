@@ -30,7 +30,7 @@ export default function ProductsPage() {
           <div className="products-grid">
             {products.map((product) => (
               <div key={product.id} className="product-card">
-                <div className="product-card-image">
+                <Link href={`/products/${product.slug}`} className="product-card-image" style={{ display: 'block' }}>
                   <Image
                     src={product.image}
                     alt={product.name}
@@ -39,35 +39,36 @@ export default function ProductsPage() {
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                   <div className="product-card-overlay">
-                    <Link
-                      href={`/products/${product.slug}`}
+                    <span
                       className="btn btn-secondary btn-sm"
                       style={{ background: 'white', color: 'var(--color-gold-dark)' }}
                     >
                       View Details →
-                    </Link>
+                    </span>
                   </div>
-                </div>
-                <div className="product-card-body">
-                  <span className="badge badge-green" style={{ marginBottom: '0.75rem' }}>✓ Available</span>
-                  <div className="product-card-name">{product.name}</div>
-                  <span className="product-card-name-mr">{product.nameMr}</span>
-                  <p style={{ fontSize: '0.88rem', marginTop: '0.5rem', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                    {product.tagline}
-                  </p>
-                  <div style={{ marginTop: '0.75rem', display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
-                    {product.ingredients.slice(0, 3).map((ing) => (
-                      <span key={ing} style={{
-                        fontSize: '0.72rem', padding: '0.2rem 0.6rem',
-                        background: 'var(--color-green-light)',
-                        borderRadius: 'var(--radius-full)',
-                        color: 'var(--color-green-dark)', fontWeight: 500,
-                      }}>
-                        {ing.split(' ')[0]}
-                      </span>
-                    ))}
+                </Link>
+                <Link href={`/products/${product.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
+                  <div className="product-card-body">
+                    <span className="badge badge-green" style={{ marginBottom: '0.75rem' }}>✓ Available</span>
+                    <div className="product-card-name">{product.name}</div>
+                    <span className="product-card-name-mr">{product.nameMr}</span>
+                    <p style={{ fontSize: '0.88rem', marginTop: '0.5rem', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                      {product.tagline}
+                    </p>
+                    <div style={{ marginTop: '0.75rem', display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                      {product.ingredients.slice(0, 3).map((ing) => (
+                        <span key={ing} style={{
+                          fontSize: '0.72rem', padding: '0.2rem 0.6rem',
+                          background: 'var(--color-green-light)',
+                          borderRadius: 'var(--radius-full)',
+                          color: 'var(--color-green-dark)', fontWeight: 500,
+                        }}>
+                          {ing.split(' ')[0]}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </Link>
                 <div className="product-card-footer">
                   <a
                     href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(product.whatsappMessage)}`}
