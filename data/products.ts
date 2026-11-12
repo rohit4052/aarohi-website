@@ -133,7 +133,7 @@ export const products: Product[] = [
       'हलक्या हाताने मसाज करून स्वच्छ पाण्याने केस धुवावेत.',
     ],
     whatsappMessage:
-      'नमस्कार! मला Arohi Herbal Shampoo (100 ml) बद्दल माहिती हवी आहे. कृपया किंमत आणि उपलब्धता सांगा. 🌿',
+      'नमस्कार! मला Arohi Herbal Shampoo (200 ml) बद्दल माहिती हवी आहे. कृपया किंमत आणि उपलब्धता सांगा. 🌿',
   },
   {
     id: 'toner',
@@ -245,7 +245,7 @@ export const products: Product[] = [
       'प्रत्येक शॅम्पूनंतर वापरा',
     ],
     whatsappMessage:
-      'नमस्कार! मला Arohi Hair Conditioner (100 ml) बद्दल माहिती हवी आहे. कृपया किंमत आणि उपलब्धता सांगा. 🌿',
+      'नमस्कार! मला Arohi Hair Conditioner (200 ml) बद्दल माहिती हवी आहे. कृपया किंमत आणि उपलब्धता सांगा. 🌿',
   },
   {
     id: 'hair-mask',
