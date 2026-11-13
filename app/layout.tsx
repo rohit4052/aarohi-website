@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://aarohi-website.pages.dev'),
   title: {
     default: 'Arohi Hair Care – Healthy Hair... Happy You!',
     template: '%s | Arohi Hair Care',
